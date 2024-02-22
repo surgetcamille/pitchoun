@@ -1,8 +1,12 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Le musée Pitchoun</h1>
-<h2>Retrouvez toutes les oeuvres d'art de vos enfants !<h2>
+<h1>Pitchoun's museum</h1>
+<h2>Fin here all your child's drawing turn into real artwork !<h2>
+<div>
 
+<%= link_to "Create a new profile for your child", new_child_path %>
+
+</div>
 <div id="artworks">
   <% @artworks.each do |artwork| %>
     <%= render artwork %>
