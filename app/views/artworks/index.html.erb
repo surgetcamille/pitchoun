@@ -17,15 +17,23 @@
       padding: 0;
     }
     .navbar {
-      background-color: #f8f9fa !important;
+      background-color: rgba(248, 249, 250, 0.9) !important;
       border-bottom: 1px solid #dee2e6;
     }
     .navbar-brand {
       color: #28a745;
       font-weight: bold;
+      font-size: 1.5rem;
+      text-transform: uppercase;
     }
     .nav-link {
       color: #333 !important;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s ease;
+    }
+    .nav-link:hover {
+      color: #28a745 !important;
     }
     h1 {
       background-color: rgba(40, 167, 69, 0.8);
@@ -34,6 +42,8 @@
       margin-top: 50px;
       color: #fff;
       text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      animation: fadeInDown 1s ease;
     }
     h2 {
       background-color: rgba(255, 255, 0, 0.8);
@@ -42,6 +52,8 @@
       margin-bottom: 50px;
       color: #333;
       text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      animation: fadeInUp 1s ease;
     }
     .container {
       max-width: 800px;
@@ -52,6 +64,8 @@
       color: #28a745;
       border-color: #28a745;
       transition: all 0.3s ease;
+      border-radius: 25px;
+      font-size: 1.1rem;
     }
     .btn-outline-secondary:hover {
       background-color: #28a745;
@@ -59,6 +73,28 @@
     }
     .btn-outline-secondary:focus {
       box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.5);
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
@@ -69,7 +105,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
+      <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
           <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
@@ -90,7 +126,7 @@
     <h1>Pitchoun's Museum</h1>
     <h2>Find here all your child's drawings turned into real artwork!</h2>
 
-    <div class="mb-3">
+    <div class="mb-5">
       <a class="btn btn-outline-secondary" href="<%= new_child_path %>">Create a new profile for your child</a>
     </div>
 
