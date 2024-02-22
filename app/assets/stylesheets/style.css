@@ -1,0 +1,11 @@
+.accueil {
+        
+        background-image: url("https://i.picsum.photos/id/292/200/300.jpg");
+        
+    
+}
+
+.image-frame {
+    border: 2px solid #8B4513; 
+    padding: 100px; 
+  }

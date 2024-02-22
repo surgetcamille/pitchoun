@@ -110,10 +110,7 @@ GEM
       ruby2_keywords
     erubi (1.12.0)
     execjs (2.9.1)
-<<<<<<< HEAD
-=======
     ffi (1.16.3)
->>>>>>> cdd8d5069b2589a78a373aee613f7f74b413048a
     globalid (1.2.1)
       activesupport (>= 6.1)
     i18n (1.14.1)
@@ -277,11 +274,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootsnap
-<<<<<<< HEAD
-  bootstrap
-=======
   bootstrap (~> 5.3.2)
->>>>>>> cdd8d5069b2589a78a373aee613f7f74b413048a
   capybara
   cssbundling-rails (~> 1.4)
   debug

@@ -1,24 +1,23 @@
-<div id="<%= dom_id artwork %>">
 
-
-<div class="card" style="width: 18rem;">
-  <img src="<%= artwork.draw %>">
-  <div class="card-body">
-    <h5 class="card-title">Title</h5>
-    <p class="card-text">
-    <%= artwork.title %>
-  </p>
-  <h5 class="card-title">Description</h5>
-    <p class="card-text"><%= artwork.description %><p>
-  </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item"><%= artwork.date %></li>
-  </ul>
-  <div class="card-body">
-    <a href="#" class="card-link">See the author : <%= artwork.author %></a>
-  </div>
+<div class="d-flex justify-content-around flex-wrap">
+  <% @artworks.each do |artwork| %>
+  
+    <div class="card mb-3" style="width: 18rem;">
+      <img src="<%= artwork.draw %>" class="card-img-top image-frame">
+      <div class="card-body">
+        <h5 class="card-title">Title</h5>
+        <p class="card-text"><%= artwork.title %></p>
+        <h5 class="card-title">Description</h5>
+        <p class="card-text"><%= artwork.description %></p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item"><%= artwork.date %></li>
+      </ul>
+      <div class="card-body">
+        <a href="#" class="card-link">See the author: <%= artwork.author %></a>
+      </div>
+    </div>
+  <% end %>
 </div>
- 
 
 
-</div>
