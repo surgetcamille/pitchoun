@@ -1,31 +1,24 @@
 <div id="<%= dom_id artwork %>">
 
 
-  <p>
-    <strong>Draw of your artist : </strong>
-    <img src="<%= artwork.draw %>">
-  </p>
-
-  <p>
-    <strong>Title : </strong>
+<div class="card" style="width: 18rem;">
+  <img src="<%= artwork.draw %>">
+  <div class="card-body">
+    <h5 class="card-title">Title</h5>
+    <p class="card-text">
     <%= artwork.title %>
   </p>
-
-  <p>
-    <strong>Author:</strong>
-    <%= artwork.author %>
-    
-  </p>
-
-  <p>
-    <strong>Date:</strong>
-    <%= artwork.date %>
-  </p>
-
-  <p>
-    <strong>Description:</strong>
-    <%= artwork.description %>
-  </p>
+  <h5 class="card-title">Description</h5>
+    <p class="card-text"><%= artwork.description %><p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item"><%= artwork.date %></li>
+  </ul>
+  <div class="card-body">
+    <a href="#" class="card-link">See the author : <%= artwork.author %></a>
+  </div>
+</div>
+ 
 
 
 </div>

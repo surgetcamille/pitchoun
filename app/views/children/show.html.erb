@@ -3,8 +3,13 @@
 <%= render @child %>
 
 <div>
-  <%= link_to "Edit this child", edit_child_path(@child) %> |
+  <%= link_to "Edit this child's profil", edit_child_path(@child) %> |
   <%= link_to "Back to children", children_path %>
 
+<<<<<<< HEAD
   <%= button_to "Destroy this child", @child, method: :delete %>
 </div>
+=======
+  <%= button_to "Delete this child's profil", @child, method: :delete %>
+</div>
+>>>>>>> cdd8d5069b2589a78a373aee613f7f74b413048a
