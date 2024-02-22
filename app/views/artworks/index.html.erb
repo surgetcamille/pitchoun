@@ -1,44 +1,71 @@
-<p style="color: green"><%= notice %></p>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Features</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Pricing</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
-      </li>
-    </ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pitchoun's Museum</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    /* Ajoutez vos styles personnalisés ici */
+    body {
+      background-image: url('https://cdn.midjourney.com/9f27bebe-166e-4b7d-b0b2-d390d24c9968/0_0.png');
+      background-size: cover;
+      background-position: center;
+    }
+    h1 {
+      background-color: lightgreen;
+    }
+    h2 {
+      background-color: lightyellow;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-5">
+    <h1>Pitchoun's Museum</h1>
+    <h2>Find here all your child's drawings turned into real artwork!</h2>
+
+    <div class="mb-3">
+      <a class="btn btn-outline-secondary" href="<%= new_child_path %>">Create a new profile for your child</a>
+    </div>
+
+    <div id="artworks">
+      <% @artworks.each do |artwork| %>
+        <%= render artwork %>
+        <p>
+          <%= link_to "Show this artwork", artwork %>
+        </p>
+      <% end %>
+    </div>
+    
+    <%= link_to "New artwork", new_artwork_path %>
   </div>
-</nav>
-<body style="background-image: url('https://cdn.midjourney.com/9f27bebe-166e-4b7d-b0b2-d390d24c9968/0_0.png'); background-size: cover; background-position: center;">
-<h1 style=background-color:lightgreen>Pitchoun's museum</h1>
-<h2 style=background-color:lightyellow>Fin here all your child's drawing turn into real artwork !<h2>
-<div>
 
-<button type="button" class="btn btn-outline-secondary" href="<%= new_child_path %>">Create a new profile for your child</button>
-
-</div>
-<div id="artworks">
-  <% @artworks.each do |artwork| %>
-    <%= render artwork %>
-    <p>
-      <%= link_to "Show this artwork", artwork %>
-    </p>
-  <% end %>
-</div>
-<%= link_to "New artwork", new_artwork_path %>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-
-
-
+</html>
